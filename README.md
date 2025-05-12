@@ -9,6 +9,8 @@
 - input → `fala_comigo`
 - booleano true → `fatos`
 - booleano false → `migue`
+- sair do loop (break) → `sai_fora`
+- pular para próxima repetição (continue) → `continua`
 
 # Resumo
 
@@ -61,6 +63,8 @@
         // comandos
     }
     ```
+  - `sai_fora` encerra o loop atual.
+  - `continua` pula para a próxima repetição do loop.
 
 - **Operadores**
   - **Aritméticos**: `+`, `-`, `*`, `/`
@@ -72,12 +76,9 @@
 
 ---
 
-
-
 # EBNF Formal
 
-```
-
+```ebnf
 <programa> ::= "{" <lista_de_comandos> "}"
 
 <lista_de_comandos> ::= { <comando_ou_comentario> }
@@ -90,6 +91,8 @@
             | <loop>
             | <impressao>
             | <leitura>
+            | <sai_fora>
+            | <continua>
 
 <comentario> ::= "//" { <caractere> } "\n"
 
@@ -104,6 +107,9 @@
 <impressao> ::= "manda_ae" "(" <expressao> ")"
 
 <leitura> ::= "fala_comigo" "(" <identificador> ")"
+
+<sai_fora> ::= "sai_fora"
+<continua> ::= "continua"
 
 <bloco> ::= "{" <lista_de_comandos> "}"
 
@@ -134,8 +140,7 @@
 <texto> ::= '"' { <caractere> } '"'
 ```
 
-
-
+---
 
 # Exemplo de Programa em BarScript
 
@@ -155,8 +160,15 @@
         manda_ae("Vai tomar coca-cola!")
     }
 
-    boh (idade < 21) {
-        idade = idade + 1
+    boh (idade < 30) {
+        cpa (idade == 28) {
+            sai_fora
+        }
+        cpa (idade % 2 == 0) {
+            continua
+        }
         manda_ae(idade)
+        idade = idade + 1
     }
 }
+```
