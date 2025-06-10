@@ -1,0 +1,47 @@
+{
+    // variáveis
+    papo_que cont = 0
+    papo_que max = 5
+    papo_que flag = fatos
+    papo_que nome = "Albert"
+
+    // input
+    manda_ae("Digite algo:")
+    papo_que entrada = fala_comigo()
+    manda_ae("Vc digitou: " + entrada)
+
+    // if com else
+    cpa (max >= 5) {
+        manda_ae("max eh pelo menos 5")
+    }
+    caducou {
+        manda_ae("max eh menor que 5")
+    }
+
+    // operadores lógicos
+    cpa (flag && cont < max) {
+        manda_ae("flag true e cont < max")
+    }
+
+    // loop com break/continue
+    boh (cont <= max) {
+        cpa (cont % 2 == 0) {
+            continua       // pula pares
+        }
+
+        manda_ae("count = " + cont)    // 1,3,5
+
+        cpa (cont == 3) {
+            sai_fora       // para no 3
+        }
+
+        cont = cont + 1
+    }
+
+    // operadores relacionais
+    papo_que a = 10
+    papo_que b = 20
+    manda_ae(a != b)
+    manda_ae(a < b)
+    manda_ae(b >= a)
+}

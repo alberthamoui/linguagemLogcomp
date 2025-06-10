@@ -1,5 +1,8 @@
 # APS LogComp - BarScript
 
+# Curiosidade:
+O nome "BarScript" foi inspirado em expressões informais de conversa de bar, e a linguagem foi projetada com comandos que remetem à fala cotidiana (ex: 'papo_que', 'fala_comigo', 'sai_fora'), tornando o aprendizado mais divertido.
+
 # Palavras-chave:
 - declaração de variável → `papo_que`
 - condicional if → `cpa`
@@ -39,9 +42,9 @@
     ```
     manda_ae(expr)
     ```
-  - Para ler uma entrada do usuário:
+  - Para ler uma entrada do usuário (como string ou número):
     ```
-    fala_comigo(nome_da_variavel)
+    papo_que entrada = fala_comigo()
     ```
 
 - **Controle de Fluxo**
@@ -67,7 +70,7 @@
   - `continua` pula para a próxima repetição do loop.
 
 - **Operadores**
-  - **Aritméticos**: `+`, `-`, `*`, `/`
+  - **Aritméticos**: `+`, `-`, `*`, `/`, `%`
   - **Relacionais**: `==`, `!=`, `>`, `<`, `>=`, `<=`
   - **Lógicos**: `&&`, `||`
 
@@ -106,7 +109,7 @@
 
 <impressao> ::= "manda_ae" "(" <expressao> ")"
 
-<leitura> ::= "fala_comigo" "(" <identificador> ")"
+<leitura> ::= "fala_comigo" "(" ")" 
 
 <sai_fora> ::= "sai_fora"
 <continua> ::= "continua"
@@ -130,6 +133,7 @@
           | <booleano> 
           | <identificador> 
           | "(" <expressao> ")"
+          | "fala_comigo" "(" ")"
 
 <booleano> ::= "fatos" | "migue"
 
