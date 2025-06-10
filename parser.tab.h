@@ -80,11 +80,12 @@ extern int yydebug;
     MINUS = 281,                   /* MINUS  */
     TIMES = 282,                   /* TIMES  */
     DIV = 283,                     /* DIV  */
-    LBRACE = 284,                  /* LBRACE  */
-    RBRACE = 285,                  /* RBRACE  */
-    LPAREN = 286,                  /* LPAREN  */
-    RPAREN = 287,                  /* RPAREN  */
-    ERROR = 288                    /* ERROR  */
+    MOD = 284,                     /* MOD  */
+    LBRACE = 285,                  /* LBRACE  */
+    RBRACE = 286,                  /* RBRACE  */
+    LPAREN = 287,                  /* LPAREN  */
+    RPAREN = 288,                  /* RPAREN  */
+    ERROR = 289                    /* ERROR  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -98,7 +99,7 @@ union YYSTYPE
     int num;
     char *str;
 
-#line 102 "parser.tab.h"
+#line 103 "parser.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
