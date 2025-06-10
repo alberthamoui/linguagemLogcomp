@@ -1,0 +1,26 @@
+{
+    papo_que idade = 26
+    papo_que nome = "Pedro"
+    papo_que ta_bebado = migue
+
+    manda_ae(idade)
+    manda_ae(nome)
+
+    cpa (idade >= 18) {
+        manda_ae("Pode beber, meu chapa!")
+    }
+    caducou {
+        manda_ae("Vai tomar coca-cola!")
+    }
+
+    boh (idade < 30) {
+        cpa (idade == 28) {
+            sai_fora
+        }
+        cpa (idade % 2 == 0) {
+            continua
+        }
+        manda_ae(idade)
+        idade = idade + 1
+    }
+}

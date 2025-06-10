@@ -1,6 +1,7 @@
 {
     // variáveis
     papo_que cont = 0
+    papo_que ssss = "Pedro"
     papo_que max = 5
     papo_que flag = fatos
     papo_que nome = "Albert"
