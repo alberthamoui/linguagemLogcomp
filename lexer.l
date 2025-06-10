@@ -34,6 +34,7 @@ id      {letter}({letter}|{digit})*
 "-"               return MINUS;
 "*"               return TIMES;
 "/"               return DIV;
+"%"               return MOD;
 
 "{"               return LBRACE;
 "}"               return RBRACE;

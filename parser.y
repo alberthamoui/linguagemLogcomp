@@ -17,7 +17,7 @@ void yyerror(const char *s);
 %token PAPO_QUE CPA CADUCOU BOH MANDA_AE FALA_COMIGO SAI_FORA CONTINUA
 %token TRUE FALSE
 %token EQ NEQ GE LE GT LT AND OR
-%token ATTR PLUS MINUS TIMES DIV
+%token ATTR PLUS MINUS TIMES DIV MOD
 %token LBRACE RBRACE LPAREN RPAREN
 %token ERROR
 
@@ -54,7 +54,7 @@ loop: BOH LPAREN expressao RPAREN bloco ;
 
 impressao: MANDA_AE LPAREN expressao RPAREN ;
 
-leitura: FALA_COMIGO LPAREN ID RPAREN ;
+leitura: FALA_COMIGO LPAREN RPAREN ;
 
 bloco: LBRACE comandos RBRACE ;
 
@@ -63,6 +63,7 @@ expressao:
     | expressao MINUS expressao
     | expressao TIMES expressao
     | expressao DIV expressao
+    | expressao MOD expressao
     | expressao EQ expressao
     | expressao NEQ expressao
     | expressao GE expressao
